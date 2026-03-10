@@ -20,7 +20,7 @@ int main(void) {
     b = fx2fp(fp2fx(2.4515, 4), 4);
     printf("b = %f\n", b);
 
-    b21 = fx2fp(fp2fx(2.4515, 21), 21);
+    b21 = fx2fp(fp2fx(2.4515, 8), 8);
     printf("b = %f\n", b21);
 
     b10 = fx2fp(fp2fx(2.4515, 10), 10);
