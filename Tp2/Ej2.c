@@ -1,15 +1,17 @@
 #include <math.h>
 #include <stdio.h>
+#include <limits.h>
+#include <stdint.h>
 
-float fx2fp(int valor, char n) {
+float fx2fp(int32_t valor, char n) {
     float resultado;
     resultado = (float)valor /(1<<n);
     return resultado;
 }
 
-int fp2fx(float valor, char n) {
-    int resultado;
-    resultado = (int)(valor * (1<<n));
+int32_t fp2fx(float valor, char n) {
+    int32_t resultado;
+    resultado = (int32_t)(valor * (1<<n));
     return resultado;
 }
 
