@@ -8,10 +8,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:\\01. Facultad\\Control y Sistemas\\Tp2",
-      "program": "d:\\01. Facultad\\Control y Sistemas\\Tp2\\Ej1.exe",
+      "cwd": "d:/Facultad/Control/Control-y-Sistemas/Tp2",
+      "program": "d:/Facultad/Control/Control-y-Sistemas/Tp2/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

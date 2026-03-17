@@ -18,15 +18,14 @@ int32_t fp2fx(float valor, char n) {
 int main(void) {
     float b,b21,b10;
 
-
     b = fx2fp(fp2fx(2.4515, 4), 4);
     printf("b = %f\n", b);
 
     b21 = fx2fp(fp2fx(2.4515, 8), 8);
-    printf("b = %f\n", b21);
+    printf("b1 = %f\n", b21);
 
     b10 = fx2fp(fp2fx(2.4515, 10), 10);
-    printf("b = %f\n", b10);
+    printf("b2 = %f\n", b10);
 
     return 0;
 }
