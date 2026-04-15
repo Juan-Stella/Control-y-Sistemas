@@ -25,7 +25,6 @@ ylabel('Magnitud');
 title('Espectros de la señal original y filtrada');
 xlim([0 4000])
 
-%sound(x, fs)
 %sound(x_filtered, fs)
 
 % Comparación N=10, N=100 y N=1000
