@@ -25,7 +25,8 @@ ylabel('Magnitud');
 title('Espectros de la señal original y filtrada');
 xlim([0 4000])
 
-%sound(x_filtered, fs)
+sound(x63 ...
+    , fs)
 
 % Comparación N=10, N=100 y N=1000
 Hd10 = Copy_of_filtro_pto4;  % crear el filtro
