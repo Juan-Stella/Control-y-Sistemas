@@ -1,0 +1,8 @@
+%% ¿Qué problemas trae usar aritmética de punto flotante?
+
+
+%% Nota del Ej. 4: 0 o 1 o 2
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Nota final = sat(Nota_Ej1 + Nota_Ej2 + Nota_Ej3, Nota_Ej4, 10) %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

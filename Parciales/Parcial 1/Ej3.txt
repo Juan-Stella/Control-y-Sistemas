@@ -1,0 +1,4 @@
+%% ¿Cuál es el objetivo de los Bnoise? y ¿Qué riesgo corro al no asignar 
+%% suficientes Bnoise?
+
+%% Nota del Ej. 3: 0 o 1 o 2

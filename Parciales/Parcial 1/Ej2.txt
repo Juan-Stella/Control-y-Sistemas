@@ -1,0 +1,4 @@
+%% Sugiera una representación en punto fijo que sea óptima para almacenar
+%% la señal del Ejercicio 1, sin la presencia del ruido.
+
+%% Nota del Ej. 2: 0 o 1
