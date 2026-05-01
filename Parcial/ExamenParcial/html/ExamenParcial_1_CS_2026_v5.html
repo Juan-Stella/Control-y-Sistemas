@@ -1,0 +1,535 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Stella, Juan: 12552</title><meta name="generator" content="MATLAB 9.14"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2026-04-28"><meta name="DC.source" content="ExamenParcial_1_CS_2026_v5.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h1>Stella, Juan: 12552</h1><!--introduction--><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">PARCIAL I: CONTROL Y SISTEMAS</a></li><li><a href="#2">Contexto</a></li><li><a href="#3">Objetivo</a></li><li><a href="#4">Criterio de evaluai&oacute;n</a></li><li><a href="#5">Tareas a desarrollar</a></li><li><a href="#6">1. An&aacute;lisis Previo de los Datos</a></li><li><a href="#11">2. Pre-Proceso</a></li><li><a href="#16">3. Generar serie final y gr&aacute;ficos</a></li><li><a href="#18">4. Validaci&oacute;n de la respuesta</a></li><li><a href="#20">4. Validaci&oacute;n de la respuesta</a></li><li><a href="#23">5. Tasa de Cambio (Derivada) y Punto Fijo</a></li></ul></div><h2 id="1">PARCIAL I: CONTROL Y SISTEMAS</h2><h2 id="2">Contexto</h2><p>Est&aacute;s analizando la cantidad de turnos atendidos en un consultorio m&eacute;dico. El sistema registra diariamente el n&uacute;mero de pacientes atendidos, generando una serie temporal discreta x[k], donde cada muestra representa un d&iacute;a.</p><h2 id="3">Objetivo</h2><p>El equipo de gesti&oacute;n solicita elaborar un reporte resumido con un <b>valor representativo cada 10 d&iacute;as</b>, con el objetivo de facilitar el monitoreo operativo y la planificaci&oacute;n de recursos a largo plazo, eliminando las fluctuaciones diarias irrelevantes para la tendencia general anual.</p><h2 id="4">Criterio de evaluai&oacute;n</h2><p><i>&#8220;No se evaluar&aacute; &uacute;nicamente el resultado num&eacute;rico, sino la calidad del razonamiento t&eacute;cnico y la justificaci&oacute;n de las decisiones de dise&ntilde;o.&#8221;</i></p><p><i>"Cuide la presentaci&oacute;n, escala, colores, t&iacute;tulos y leyendas de sus gr&aacute;ficos para hacerlos lo m&aacute;s legible posible para la evaluaci&oacute;n."</i></p><h2 id="5">Tareas a desarrollar</h2><p>Dise&ntilde;ar e implementar en MATLAB un script que permita reducir la serie temporal original. La salida debe ser una nueva serie reducida que entregue un valor representativo cada 10 d&iacute;as.</p><h2 id="6">1. An&aacute;lisis Previo de los Datos</h2><p>Seleccione y aplique comandos de MATLAB para estudiar la se&ntilde;al original y extraer la informaci&oacute;n relevante.</p><pre class="codeinput"><span class="comment">%------</span>
+clc
+clear
+x = load(<span class="string">'datos_turnos.txt'</span>);
+N = length(x);
+k = (0:N-1)';
+fs = 1;
+
+[freq_x, mag_x] = my_dft(x, fs);
+
+figure
+subplot(2,1,1)
+plot(k, x, <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 1.2)
+title(<span class="string">'Se&ntilde;al original: turnos diarios'</span>)
+xlabel(<span class="string">'D&iacute;a'</span>); ylabel(<span class="string">'Turnos'</span>); grid <span class="string">on</span>
+
+subplot(2,1,2)
+plot(freq_x, mag_x, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 1.2)
+title(<span class="string">'Espectro de frecuencias'</span>)
+xlabel(<span class="string">'Frecuencia (ciclos/d&iacute;a)'</span>); ylabel(<span class="string">'Magnitud'</span>)
+grid <span class="string">on</span>; xlim([0 0.5])
+<span class="comment">%------</span>
+</pre><img vspace="5" hspace="5" src="ExamenParcial_1_CS_2026_v5_01.png" alt=""> <p><b>1.1 Justifique brevemente la elecci&oacute;n de dichas herramientas</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">%Utilic&eacute; herramientas para ver el comportamiento general, el rango que</span>
+<span class="comment">%toman los valores, etc (plot). Adem&aacute;s, un anl&aacute;lisis en frecuencia para ver</span>
+<span class="comment">%las componentes con mayor influencia.</span>
+</pre><p><b>1.2 Explique los resultados obtenidos del an&aacute;lisis</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">% La se&ntilde;al tiene 1825 muestras (5 a&ntilde;os).Los valores est&aacute;n entre 0 y 10 turnos.</span>
+<span class="comment">% El espectro muestra picos claros en el per&iacute;odo de 365 d&iacute;as y en el per&iacute;odo de 7 d&iacute;as</span>
+</pre><p><b>1.3 Mencione qu&eacute; informaci&oacute;n le resulta relevante y &uacute;til para la soluci&oacute;n.</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">% La se&ntilde;al tiene una componente de alta frecuencia en el periodo de 7 d&iacute;as, que se debe filtrar antes de decimar</span>
+<span class="comment">% Se desea un valor cada 10 d&iacute;as: factor de decimaci&oacute;n M = 10.</span>
+</pre><h2 id="11">2. Pre-Proceso</h2><p><b>Proceda a realizar el tratamiento de la se&ntilde;al</b></p><pre class="codeinput"><span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+M = 10;          <span class="comment">% factor de decimaci&oacute;n: 1 muestra cada 10 d&iacute;as</span>
+fs_new = fs/M;   <span class="comment">% nueva frecuencia: 0.1 muestras/d&iacute;a</span>
+
+frec =1/10;
+N_ma = round(fs/frec);
+b = (1/N_ma)*ones(1,N_ma);
+a = 1;
+
+x_filt = filter(b, a, x);
+<span class="comment">%-----------------------------------------</span>
+</pre><p><b>2.1 Comente brevemente sobre el m&eacute;todo elegido para el pre-procesamiento.</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">% Se utiliza un filtro FIR tipo MA de orden N=10, ya que promedia los &uacute;ltimos 10 d&iacute;as, generando directamente el valor representativo cada 10 d&iacute;as.</span>
+<span class="comment">% Al ser FIR garantiza fase lineal, lo cual es importante para preservar la alineaci&oacute;n.</span>
+</pre><p><b>2.2 &iquest;Por qu&eacute; dicha t&eacute;cnica es necesaria y adecuada para este problema espec&iacute;fico? (considerando el contenido frecuencial).</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">% Es necesaria porque decimar sin filtrar producir&iacute;a aliasing ya que la componente semanal (f=1/7) es mayor que la nueva frecuencia fs_new y se solapar&iacute;a con la tendencia anual,</span>
+<span class="comment">%El MA es adecuado porque act&uacute;a como filtro pasa-bajos, atenuando las altas frecuencias, y con N=10 produce directamente el promediado.</span>
+</pre><p><b>2.3 Mencione los criterios utilizados para definir los par&aacute;metros del sistema de procesamiento.</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">% N_ma = 10:  As&iacute; cada muestra decimada es exactamente el promedio de los 10 d&iacute;as correspondientes</span>
+</pre><h2 id="16">3. Generar serie final y gr&aacute;ficos</h2><p>A partir del procesamiento anterior, generar la serie final y grafiquela en el tiempo y la frecuencia. Asegurarse de que la alineaci&oacute;n temporal sea correcta respecto a la se&ntilde;al original.</p><pre class="codeinput"><span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+
+x_dec = x_filt(1:M:end);
+k_dec = (0:length(x_dec)-1)' * M;
+
+figure
+subplot(2,1,1)
+plot(k, x, <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 1, <span class="string">'DisplayName'</span>, <span class="string">'Original (diaria)'</span>)
+hold <span class="string">on</span>
+plot(k_dec, x_dec, <span class="string">'r-o'</span>, <span class="string">'LineWidth'</span>, 2, <span class="string">'MarkerSize'</span>, 4, <span class="string">'DisplayName'</span>, <span class="string">'Decimada (cada 10 d&iacute;as)'</span>)
+title(<span class="string">'Se&ntilde;al original vs. serie reducida'</span>)
+xlabel(<span class="string">'D&iacute;a'</span>); ylabel(<span class="string">'Turnos'</span>); grid <span class="string">on</span>; legend; xlim([0 200])
+
+subplot(2,1,2)
+[freq_o, mag_o] = my_dft(x, fs);
+plot(freq_o, mag_o, <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 1.2)
+title(<span class="string">'Espectro se&ntilde;al original'</span>)
+xlabel(<span class="string">'Frecuencia (ciclos/d&iacute;a)'</span>); ylabel(<span class="string">'Magnitud'</span>); grid <span class="string">on</span>
+
+[freq_o, mag_o] = my_dft(x, fs);
+[freq_d, mag_d] = my_dft(x_dec, fs/M);
+
+figure
+subplot(2,1,1)
+plot(freq_o, mag_o, <span class="string">'b'</span>, <span class="string">'LineWidth'</span>, 1.2)
+title(<span class="string">'Espectro se&ntilde;al original'</span>)
+xlabel(<span class="string">'Frecuencia (ciclos/d&iacute;a)'</span>); ylabel(<span class="string">'Magnitud'</span>); grid <span class="string">on</span>
+
+subplot(2,1,2)
+plot(freq_d, mag_d, <span class="string">'r'</span>, <span class="string">'LineWidth'</span>, 1.2)
+title(<span class="string">'Espectro serie decimada'</span>)
+xlabel(<span class="string">'Frecuencia (ciclos/d&iacute;a)'</span>); ylabel(<span class="string">'Magnitud'</span>); grid <span class="string">on</span>
+<span class="comment">%-----------------------------------------</span>
+</pre><img vspace="5" hspace="5" src="ExamenParcial_1_CS_2026_v5_02.png" alt=""> <img vspace="5" hspace="5" src="ExamenParcial_1_CS_2026_v5_03.png" alt=""> <img vspace="5" hspace="5" src="ExamenParcial_1_CS_2026_v5_04.png" alt=""> <h2 id="18">4. Validaci&oacute;n de la respuesta</h2><p>Comparar su soluci&oacute;n con al menos una alternativa que considere incorrecta o sub&oacute;ptima para validar por contraste la suya.</p><pre class="codeinput"><span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+</pre><h2 id="20">4. Validaci&oacute;n de la respuesta</h2><pre class="codeinput">N_subopt = 100;
+b_subopt = (1/N_subopt) * ones(1, N_subopt);
+x_filt_subopt = filter(b_subopt, 1, x);
+x_dec_subopt = x_filt_subopt(1:M:end);
+k_dec_subopt = (0:length(x_dec_subopt)-1)' * M;
+[freq_subopt, mag_subopt] = my_dft(x_dec_subopt, fs/M);
+
+figure
+subplot(2,1,1)
+plot(k_dec, x_dec, <span class="string">'g-o'</span>, <span class="string">'LineWidth'</span>, 2, <span class="string">'MarkerSize'</span>, 4, <span class="string">'DisplayName'</span>, <span class="string">'MA N=10 (correcta)'</span>)
+hold <span class="string">on</span>
+plot(k_dec_subopt, x_dec_subopt, <span class="string">'r--s'</span>, <span class="string">'LineWidth'</span>, 1.5, <span class="string">'MarkerSize'</span>, 4, <span class="string">'DisplayName'</span>, <span class="string">'MA N=100 (sub&oacute;ptima)'</span>)
+title(<span class="string">'Comparaci&oacute;n temporal: N=10 vs. N=100'</span>)
+xlabel(<span class="string">'D&iacute;a'</span>); ylabel(<span class="string">'Turnos'</span>); grid <span class="string">on</span>; legend; xlim([0 200])
+
+subplot(2,1,2)
+plot(freq_d, mag_d, <span class="string">'g'</span>, <span class="string">'LineWidth'</span>, 1.5, <span class="string">'DisplayName'</span>, <span class="string">'MA N=10'</span>)
+hold <span class="string">on</span>
+plot(freq_subopt, mag_subopt, <span class="string">'r--'</span>, <span class="string">'LineWidth'</span>, 1.5, <span class="string">'DisplayName'</span>, <span class="string">'MA N=100'</span>)
+title(<span class="string">'Comparaci&oacute;n espectral: N=10 vs. N=100'</span>)
+xlabel(<span class="string">'Frecuencia (ciclos/d&iacute;a)'</span>); ylabel(<span class="string">'Magnitud'</span>); grid <span class="string">on</span>; legend
+<span class="comment">%-----------------------------------------</span>
+</pre><img vspace="5" hspace="5" src="ExamenParcial_1_CS_2026_v5_05.png" alt=""> <img vspace="5" hspace="5" src="ExamenParcial_1_CS_2026_v5_06.png" alt=""> <p><b>4.1 Qu&eacute; efectos negativos produce la alternativa sub&oacute;ptima (en el dominio del tiempo y/o frecuencia).</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">% El MA con N=100 sobresuaviza la se&ntilde;al, es decir, aten&uacute;a no solo el ciclo semanal sino tambi&eacute;n parte de la tendencia anual que se quer&iacute;a preservar.</span>
+<span class="comment">% En el dominio del tiempo los valores decimados no representan una ventana de 10 d&iacute;as sino de 30</span>
+</pre><p><b>4.2 Por qu&eacute; su soluci&oacute;n propuesta mitiga estos efectos.</b></p><pre class="codeinput"><span class="comment">% Respuesta</span>
+<span class="comment">% El MA con N=10 aten&uacute;a &uacute;nicamente las fluctuaciones de alta frecuencia (ciclo semanal y superiores)</span>
+<span class="comment">% Adem&aacute;s al coincidir N=M=10, cada muestra decimada es exactamente el promedio  de los 10 d&iacute;as correspondientes</span>
+</pre><h2 id="23">5. Tasa de Cambio (Derivada) y Punto Fijo</h2><p>Se nos comunica que conocer solo la cantidad total de pacientes ya no es suficiente para organizar el consultorio. Ahora necesitamos saber qu&eacute; tan r&aacute;pido sube o baja esa cantidad. Esta "velocidad de cambio" de la demanda se calcula directamente usando la derivada matem&aacute;tica.</p><p>Como ingeniero propon&eacute;s usar <b>representaci&oacute;n en punto fijo</b> para optimizar el sistema: buscamos aumentar la velocidad de c&aacute;lculo y minimizar el uso de memoria.</p><div><ol><li>Construya la velocidad de cambio de <b>su se&ntilde;al resultado del ejercicio anterior</b> en (turno/d&iacute;a).</li><li>Analice c&oacute;mo se distribuyen los valores de su se&ntilde;al (usando un histograma o gr&aacute;fico).</li><li>A partir de esa observaci&oacute;n, determine un formato en punto fijo conveniente que ajuste para dicho rango</li><li>Indique de su respuesta: N tama&ntilde;o de la palabra binaria (8,16 o 32 bits) y los m bits para la parte entera, n bits para la parte fraccionaria usando la notaci&oacute;n Qm.n (con 1 bit de signo), rango, resoluci&oacute;n y ruido cuantizaci&oacute;n</li></ol></div><p><b>Completar con los resultados obtenidos:</b></p><div><ul><li><b>Palabra binaria:</b> 8 bits</li><li><b>Representaci&oacute;n</b>: Q3.4 (1 bit signo + 3 enteros + 4 fraccionarios)</li><li><b>Rango</b>: [-8, 7.9375] turnos/10d&iacute;as</li><li><b>Resoluci&oacute;n</b>: 0.0625 turnos/10d&iacute;as</li><li><b>Ruido de cuantizaci&oacute;n</b>: 0.03125 turnos/10d&iacute;as</li></ul></div><pre class="codeinput"><span class="comment">%-----------------------------------------</span>
+<span class="comment">% C&aacute;lculo de la velocidad</span>
+<span class="comment">%-----------------------------------------</span>
+vel = diff(x_dec);
+k_vel = k_dec(1:end-1) + M/2;
+
+figure
+subplot(2,1,1)
+stem(k_vel, vel, <span class="string">'filled'</span>, <span class="string">'MarkerSize'</span>, 3)
+title(<span class="string">'Velocidad de cambio de la demanda'</span>)
+xlabel(<span class="string">'D&iacute;a'</span>); ylabel(<span class="string">'&#916;turnos / 10 d&iacute;as'</span>); grid <span class="string">on</span>
+
+subplot(2,1,2)
+histogram(vel, 20, <span class="string">'FaceColor'</span>, <span class="string">'b'</span>, <span class="string">'EdgeColor'</span>, <span class="string">'k'</span>)
+title(<span class="string">'Histograma de la velocidad de cambio'</span>)
+xlabel(<span class="string">'&#916;turnos / 10 d&iacute;as'</span>); ylabel(<span class="string">'Frecuencia'</span>); grid <span class="string">on</span>
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+disp(<span class="string">'Rango de la velocidad de cambio:'</span>)
+disp([<span class="string">'Min: '</span>, num2str(min(vel))])
+disp([<span class="string">'Max: '</span>, num2str(max(vel))])
+
+m = 3;  <span class="comment">% bits parte entera</span>
+n = 4;  <span class="comment">% bits parte fraccionaria</span>
+N_bits = 8;
+
+rango_min = -2^m;
+rango_max = 2^m - 2^(-n);
+resolucion = 2^(-n);
+ruido_cuant = resolucion / 2;
+
+disp([<span class="string">'Rango Q'</span>, num2str(m), <span class="string">'.'</span>, num2str(n), <span class="string">': ['</span>, num2str(rango_min), <span class="string">', '</span>, num2str(rango_max), <span class="string">']'</span>])
+disp([<span class="string">'Resoluci&oacute;n: '</span>, num2str(resolucion)])
+disp([<span class="string">'Ruido de cuantizaci&oacute;n: '</span>, num2str(ruido_cuant)])
+<span class="comment">%-----------------------------------------</span>
+</pre><pre class="codeoutput">Rango de la velocidad de cambio:
+Min: -1.5
+Max: 5.1
+Rango Q3.4: [-8, 7.9375]
+Resoluci&oacute;n: 0.0625
+Ruido de cuantizaci&oacute;n: 0.03125
+</pre><img vspace="5" hspace="5" src="ExamenParcial_1_CS_2026_v5_07.png" alt=""> <p class="footer"><br><a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2023a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+%% Stella, Juan: 12552 
+
+
+%% PARCIAL I: CONTROL Y SISTEMAS
+
+
+%% Contexto
+% Estás analizando la cantidad de turnos atendidos en un consultorio médico. 
+% El sistema registra diariamente el número de pacientes atendidos, generando 
+% una serie temporal discreta x[k], donde cada muestra representa un día.
+
+%% Objetivo
+% El equipo de gestión solicita elaborar un reporte resumido con un *valor representativo 
+% cada 10 días*, con el objetivo de facilitar el monitoreo operativo y la planificación 
+% de recursos a largo plazo, eliminando las fluctuaciones diarias irrelevantes 
+% para la tendencia general anual.
+
+%% Criterio de evaluaión
+% _“No se evaluará únicamente el resultado numérico, sino la calidad del razonamiento 
+% técnico y la justificación de las decisiones de diseño.”_
+%
+% _"Cuide la presentación, escala, colores, títulos y leyendas de sus gráficos para hacerlos 
+% lo más legible posible para la evaluación."_
+
+%% Tareas a desarrollar
+% Diseñar e implementar en MATLAB un script que permita reducir la serie 
+% temporal original. La salida debe ser una nueva serie reducida que entregue 
+% un valor representativo cada 10 días.
+
+
+%% 1. Análisis Previo de los Datos
+% Seleccione y aplique comandos de MATLAB para estudiar la señal original 
+% y extraer la información relevante.
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+clc
+clear
+x = load('datos_turnos.txt');
+N = length(x);
+k = (0:N-1)';
+fs = 1;
+
+[freq_x, mag_x] = my_dft(x, fs);
+
+figure
+subplot(2,1,1)
+plot(k, x, 'b', 'LineWidth', 1.2)
+title('Señal original: turnos diarios')
+xlabel('Día'); ylabel('Turnos'); grid on
+
+subplot(2,1,2)
+plot(freq_x, mag_x, 'r', 'LineWidth', 1.2)
+title('Espectro de frecuencias')
+xlabel('Frecuencia (ciclos/día)'); ylabel('Magnitud')
+grid on; xlim([0 0.5])
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+
+
+%%
+% 
+% *1.1 Justifique brevemente la elección de dichas herramientas*
+
+% Respuesta
+%Utilicé herramientas para ver el comportamiento general, el rango que
+%toman los valores, etc (plot). Además, un anlálisis en frecuencia para ver
+%las componentes con mayor influencia.
+
+%%
+% 
+% *1.2 Explique los resultados obtenidos del análisis*
+
+% Respuesta
+% La señal tiene 1825 muestras (5 años).Los valores están entre 0 y 10 turnos.
+% El espectro muestra picos claros en el período de 365 días y en el período de 7 días
+
+%%
+% 
+% *1.3 Mencione qué información le resulta relevante y útil para la solución.*
+
+% Respuesta
+% La señal tiene una componente de alta frecuencia en el periodo de 7 días, que se debe filtrar antes de decimar 
+% Se desea un valor cada 10 días: factor de decimación M = 10.
+
+
+%% 2. Pre-Proceso
+% *Proceda a realizar el tratamiento de la señal*
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+M = 10;          % factor de decimación: 1 muestra cada 10 días
+fs_new = fs/M;   % nueva frecuencia: 0.1 muestras/día
+
+frec =1/10;
+N_ma = round(fs/frec);
+b = (1/N_ma)*ones(1,N_ma);
+a = 1;
+ 
+x_filt = filter(b, a, x);
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+%%
+% 
+% *2.1 Comente brevemente sobre el método elegido para el pre-procesamiento.*
+
+% Respuesta
+% Se utiliza un filtro FIR tipo MA de orden N=10, ya que promedia los últimos 10 días, generando directamente el valor representativo cada 10 días.
+% Al ser FIR garantiza fase lineal, lo cual es importante para preservar la alineación.
+
+%%
+% 
+% *2.2 ¿Por qué dicha técnica es necesaria y adecuada para este problema específico? (considerando el contenido frecuencial).*
+
+% Respuesta
+% Es necesaria porque decimar sin filtrar produciría aliasing ya que la componente semanal (f=1/7) es mayor que la nueva frecuencia fs_new y se solaparía con la tendencia anual,
+%El MA es adecuado porque actúa como filtro pasa-bajos, atenuando las altas frecuencias, y con N=10 produce directamente el promediado.
+
+%%
+% 
+% *2.3 Mencione los criterios utilizados para definir los parámetros del sistema de procesamiento.*
+
+% Respuesta
+% N_ma = 10:  Así cada muestra decimada es exactamente el promedio de los 10 días correspondientes
+
+
+
+%% 3. Generar serie final y gráficos
+% A partir del procesamiento anterior, generar la serie final y grafiquela en 
+% el tiempo y la frecuencia. Asegurarse de que la alineación temporal sea correcta 
+% respecto a la señal original.
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+x_dec = x_filt(1:M:end);
+k_dec = (0:length(x_dec)-1)' * M;
+
+figure
+subplot(2,1,1)
+plot(k, x, 'b', 'LineWidth', 1, 'DisplayName', 'Original (diaria)')
+hold on
+plot(k_dec, x_dec, 'r-o', 'LineWidth', 2, 'MarkerSize', 4, 'DisplayName', 'Decimada (cada 10 días)')
+title('Señal original vs. serie reducida')
+xlabel('Día'); ylabel('Turnos'); grid on; legend; xlim([0 200])
+
+subplot(2,1,2)
+[freq_o, mag_o] = my_dft(x, fs);
+plot(freq_o, mag_o, 'b', 'LineWidth', 1.2)
+title('Espectro señal original')
+xlabel('Frecuencia (ciclos/día)'); ylabel('Magnitud'); grid on
+
+[freq_o, mag_o] = my_dft(x, fs);
+[freq_d, mag_d] = my_dft(x_dec, fs/M);
+
+figure
+subplot(2,1,1)
+plot(freq_o, mag_o, 'b', 'LineWidth', 1.2)
+title('Espectro señal original')
+xlabel('Frecuencia (ciclos/día)'); ylabel('Magnitud'); grid on
+
+subplot(2,1,2)
+plot(freq_d, mag_d, 'r', 'LineWidth', 1.2)
+title('Espectro serie decimada')
+xlabel('Frecuencia (ciclos/día)'); ylabel('Magnitud'); grid on
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+
+
+%% 4. Validación de la respuesta
+% Comparar su solución con al menos una alternativa que considere incorrecta 
+% o subóptima para validar por contraste la suya. 
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%% 4. Validación de la respuesta
+
+N_subopt = 100;
+b_subopt = (1/N_subopt) * ones(1, N_subopt);
+x_filt_subopt = filter(b_subopt, 1, x);
+x_dec_subopt = x_filt_subopt(1:M:end);
+k_dec_subopt = (0:length(x_dec_subopt)-1)' * M;
+[freq_subopt, mag_subopt] = my_dft(x_dec_subopt, fs/M);
+
+figure
+subplot(2,1,1)
+plot(k_dec, x_dec, 'g-o', 'LineWidth', 2, 'MarkerSize', 4, 'DisplayName', 'MA N=10 (correcta)')
+hold on
+plot(k_dec_subopt, x_dec_subopt, 'rREPLACE_WITH_DASH_DASHs', 'LineWidth', 1.5, 'MarkerSize', 4, 'DisplayName', 'MA N=100 (subóptima)')
+title('Comparación temporal: N=10 vs. N=100')
+xlabel('Día'); ylabel('Turnos'); grid on; legend; xlim([0 200])
+
+subplot(2,1,2)
+plot(freq_d, mag_d, 'g', 'LineWidth', 1.5, 'DisplayName', 'MA N=10')
+hold on
+plot(freq_subopt, mag_subopt, 'rREPLACE_WITH_DASH_DASH', 'LineWidth', 1.5, 'DisplayName', 'MA N=100')
+title('Comparación espectral: N=10 vs. N=100')
+xlabel('Frecuencia (ciclos/día)'); ylabel('Magnitud'); grid on; legend
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+%%
+% 
+% *4.1 Qué efectos negativos produce la alternativa subóptima (en el dominio del tiempo y/o frecuencia).*
+
+% Respuesta
+% El MA con N=100 sobresuaviza la señal, es decir, atenúa no solo el ciclo semanal sino también parte de la tendencia anual que se quería preservar.
+% En el dominio del tiempo los valores decimados no representan una ventana de 10 días sino de 30
+
+%%
+% 
+% *4.2 Por qué su solución propuesta mitiga estos efectos.*
+
+% Respuesta
+% El MA con N=10 atenúa únicamente las fluctuaciones de alta frecuencia (ciclo semanal y superiores) 
+% Además al coincidir N=M=10, cada muestra decimada es exactamente el promedio  de los 10 días correspondientes
+%% 5. Tasa de Cambio (Derivada) y Punto Fijo
+% Se nos comunica que conocer solo la cantidad total de pacientes ya no es suficiente para organizar el consultorio. 
+% Ahora necesitamos saber qué tan rápido sube o baja esa cantidad. Esta 
+% "velocidad de cambio" de la demanda se calcula directamente usando la derivada matemática.
+%%
+% Como ingeniero proponés usar *representación en punto fijo* para optimizar el sistema: 
+% buscamos aumentar la velocidad de cálculo y minimizar el uso de memoria.
+
+%%
+% 
+% # Construya la velocidad de cambio de *su señal resultado del ejercicio anterior* en (turno/día). 
+% # Analice cómo se distribuyen los valores de su señal (usando un histograma o gráfico). 
+% # A partir de esa observación, determine un formato en punto fijo conveniente que ajuste para dicho rango 
+% # Indique de su respuesta: N tamaño de la palabra binaria (8,16 o 32 bits) y los m bits para la parte entera, n bits para la parte fraccionaria usando la notación Qm.n (con 1 bit de signo), rango, resolución y ruido cuantización 
+
+
+
+
+%%
+% *Completar con los resultados obtenidos:*
+
+%%
+% * *Palabra binaria:* 8 bits
+% * *Representación*: Q3.4 (1 bit signo + 3 enteros + 4 fraccionarios)
+% * *Rango*: [-8, 7.9375] turnos/10días
+% * *Resolución*: 0.0625 turnos/10días
+% * *Ruido de cuantización*: 0.03125 turnos/10días
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Cálculo de la velocidad 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+vel = diff(x_dec);                       
+k_vel = k_dec(1:end-1) + M/2;            
+
+figure
+subplot(2,1,1)
+stem(k_vel, vel, 'filled', 'MarkerSize', 3)
+title('Velocidad de cambio de la demanda')
+xlabel('Día'); ylabel('Δturnos / 10 días'); grid on
+
+subplot(2,1,2)
+histogram(vel, 20, 'FaceColor', 'b', 'EdgeColor', 'k')
+title('Histograma de la velocidad de cambio')
+xlabel('Δturnos / 10 días'); ylabel('Frecuencia'); grid on
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+disp('Rango de la velocidad de cambio:')
+disp(['Min: ', num2str(min(vel))])
+disp(['Max: ', num2str(max(vel))])
+
+m = 3;  % bits parte entera
+n = 4;  % bits parte fraccionaria
+N_bits = 8;
+
+rango_min = -2^m;
+rango_max = 2^m - 2^(-n);
+resolucion = 2^(-n);
+ruido_cuant = resolucion / 2;
+
+disp(['Rango Q', num2str(m), '.', num2str(n), ': [', num2str(rango_min), ', ', num2str(rango_max), ']'])
+disp(['Resolución: ', num2str(resolucion)])
+disp(['Ruido de cuantización: ', num2str(ruido_cuant)])
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+
+
+
+
+
+
+##### SOURCE END #####
+--></body></html>

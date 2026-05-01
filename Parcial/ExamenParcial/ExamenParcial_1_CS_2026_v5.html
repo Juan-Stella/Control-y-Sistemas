@@ -1,0 +1,457 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      -->
+<title>APELLIDO, NOMBRE: LEGAJO</title>
+<meta name="generator" content="MATLAB 25.2">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.date" content="2026-04-28">
+<meta name="DC.source" content="ExamenParcial_1_CS_2026_v5.m">
+<style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+span.typesection { color:#A0522D }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div class="content">
+<h1>APELLIDO, NOMBRE: LEGAJO</h1>
+<!--introduction-->
+<!--/introduction-->
+<h2>Contents</h2>
+<div>
+<ul>
+<li>
+<a href="#1">PARCIAL I: CONTROL Y SISTEMAS</a>
+</li>
+<li>
+<a href="#2">Contexto</a>
+</li>
+<li>
+<a href="#3">Objetivo</a>
+</li>
+<li>
+<a href="#4">Criterio de evaluai&oacute;n</a>
+</li>
+<li>
+<a href="#5">Tareas a desarrollar</a>
+</li>
+<li>
+<a href="#6">1. An&aacute;lisis Previo de los Datos</a>
+</li>
+<li>
+<a href="#11">2. Pre-Proceso</a>
+</li>
+<li>
+<a href="#16">3. Generar serie final y gr&aacute;ficos</a>
+</li>
+<li>
+<a href="#18">4. Validaci&oacute;n de la respuesta</a>
+</li>
+<li>
+<a href="#22">5. Tasa de Cambio (Derivada) y Punto Fijo</a>
+</li>
+</ul>
+</div>
+<h2 id="1">PARCIAL I: CONTROL Y SISTEMAS</h2>
+<h2 id="2">Contexto</h2>
+<p>Est&aacute;s analizando la cantidad de turnos atendidos en un consultorio m&eacute;dico. El sistema registra diariamente el n&uacute;mero de pacientes atendidos, generando una serie temporal discreta x[k], donde cada muestra representa un d&iacute;a.</p>
+<h2 id="3">Objetivo</h2>
+<p>El equipo de gesti&oacute;n solicita elaborar un reporte resumido con un <b>valor representativo cada 10 d&iacute;as</b>, con el objetivo de facilitar el monitoreo operativo y la planificaci&oacute;n de recursos a largo plazo, eliminando las fluctuaciones diarias irrelevantes para la tendencia general anual.</p>
+<h2 id="4">Criterio de evaluai&oacute;n</h2>
+<p>
+<i>&ldquo;No se evaluar&aacute; &uacute;nicamente el resultado num&eacute;rico, sino la calidad del razonamiento t&eacute;cnico y la justificaci&oacute;n de las decisiones de dise&ntilde;o.&rdquo;</i>
+</p>
+<p>
+<i>"Cuide la presentaci&oacute;n, escala, colores, t&iacute;tulos y leyendas de sus gr&aacute;ficos para hacerlos lo m&aacute;s legible posible para la evaluaci&oacute;n."</i>
+</p>
+<h2 id="5">Tareas a desarrollar</h2>
+<p>Dise&ntilde;ar e implementar en MATLAB un script que permita reducir la serie temporal original. La salida debe ser una nueva serie reducida que entregue un valor representativo cada 10 d&iacute;as.</p>
+<h2 id="6">1. An&aacute;lisis Previo de los Datos</h2>
+<p>Seleccione y aplique comandos de MATLAB para estudiar la se&ntilde;al original y extraer la informaci&oacute;n relevante.</p>
+<pre class="codeinput">
+<span class="comment">%------</span>
+clc
+clear
+x = load(<span class="string">'datos_turnos.txt'</span>);
+<span class="comment">%------</span>
+</pre>
+<p>
+<b>1.1 Justifique brevemente la elecci&oacute;n de dichas herramientas</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<p>
+<b>1.2 Explique los resultados obtenidos del an&aacute;lisis</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<p>
+<b>1.3 Mencione qu&eacute; informaci&oacute;n le resulta relevante y &uacute;til para la soluci&oacute;n.</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<h2 id="11">2. Pre-Proceso</h2>
+<p>
+<b>Proceda a realizar el tratamiento de la se&ntilde;al</b>
+</p>
+<pre class="codeinput">
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%-----------------------------------------</span>
+</pre>
+<p>
+<b>2.1 Comente brevemente sobre el m&eacute;todo elegido para el pre-procesamiento.</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<p>
+<b>2.2 &iquest;Por qu&eacute; dicha t&eacute;cnica es necesaria y adecuada para este problema espec&iacute;fico? (considerando el contenido frecuencial).</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<p>
+<b>2.3 Mencione los criterios utilizados para definir los par&aacute;metros del sistema de procesamiento.</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<h2 id="16">3. Generar serie final y gr&aacute;ficos</h2>
+<p>A partir del procesamiento anterior, generar la serie final y grafiquela en el tiempo y la frecuencia. Asegurarse de que la alineaci&oacute;n temporal sea correcta respecto a la se&ntilde;al original.</p>
+<pre class="codeinput">
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%-----------------------------------------</span>
+</pre>
+<h2 id="18">4. Validaci&oacute;n de la respuesta</h2>
+<p>Comparar su soluci&oacute;n con al menos una alternativa que considere incorrecta o sub&oacute;ptima para validar por contraste la suya.</p>
+<pre class="codeinput">
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%-----------------------------------------</span>
+</pre>
+<p>
+<b>4.1 Qu&eacute; efectos negativos produce la alternativa sub&oacute;ptima (en el dominio del tiempo y/o frecuencia).</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<p>
+<b>4.2 Por qu&eacute; su soluci&oacute;n propuesta mitiga estos efectos.</b>
+</p>
+<pre class="codeinput">
+<span class="comment">% Respuesta</span>
+</pre>
+<h2 id="22">5. Tasa de Cambio (Derivada) y Punto Fijo</h2>
+<p>Se nos comunica que conocer solo la cantidad total de pacientes ya no es suficiente para organizar el consultorio. Ahora necesitamos saber qu&eacute; tan r&aacute;pido sube o baja esa cantidad. Esta "velocidad de cambio" de la demanda se calcula directamente usando la derivada matem&aacute;tica.</p>
+<p>Como ingeniero propon&eacute;s usar <b>representaci&oacute;n en punto fijo</b> para optimizar el sistema: buscamos aumentar la velocidad de c&aacute;lculo y minimizar el uso de memoria.</p>
+<div>
+<ol>
+<li>Construya la velocidad de cambio de <b>su se&ntilde;al resultado del ejercicio anterior</b> en (turno/d&iacute;a).</li>
+<li>Analice c&oacute;mo se distribuyen los valores de su se&ntilde;al (usando un histograma o gr&aacute;fico).</li>
+<li>A partir de esa observaci&oacute;n, determine un formato en punto fijo conveniente que ajuste para dicho rango</li>
+<li>Indique de su respuesta: N tama&ntilde;o de la palabra binaria (8,16 o 32 bits) y los m bits para la parte entera, n bits para la parte fraccionaria usando la notaci&oacute;n Qm.n (con 1 bit de signo), rango, resoluci&oacute;n y ruido cuantizaci&oacute;n</li>
+</ol>
+</div>
+<p>
+<b>Completar con los resultados obtenidos:</b>
+</p>
+<div>
+<ul>
+<li>
+<b>Palabra binaria:</b> N</li>
+<li>
+<b>Representaci&oacute;n</b>:Qm.n</li>
+<li>
+<b>Rango</b>:</li>
+<li>
+<b>Resoluci&oacute;n:</b>:</li>
+<li>
+<b>Ruido de cuantizaci&oacute;n</b>:</li>
+</ul>
+</div>
+<pre class="codeinput">
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">% C&aacute;lculo de la velocidad</span>
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">% Coloque el c&oacute;digo de su soluci&oacute;n aqu&iacute;</span>
+<span class="comment">%-----------------------------------------</span>
+<span class="comment">%</span>
+<span class="comment">%</span>
+<span class="comment">%-----------------------------------------</span>
+</pre>
+<p class="footer">
+<br>
+<a href="https://www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2025b</a>
+<br>
+</p>
+</div>
+<!--
+##### SOURCE BEGIN #####
+%% APELLIDO, NOMBRE: LEGAJO 
+
+
+%% PARCIAL I: CONTROL Y SISTEMAS
+
+
+%% Contexto
+% Estás analizando la cantidad de turnos atendidos en un consultorio médico. 
+% El sistema registra diariamente el número de pacientes atendidos, generando 
+% una serie temporal discreta x[k], donde cada muestra representa un día.
+
+%% Objetivo
+% El equipo de gestión solicita elaborar un reporte resumido con un *valor representativo 
+% cada 10 días*, con el objetivo de facilitar el monitoreo operativo y la planificación 
+% de recursos a largo plazo, eliminando las fluctuaciones diarias irrelevantes 
+% para la tendencia general anual.
+
+%% Criterio de evaluaión
+% _“No se evaluará únicamente el resultado numérico, sino la calidad del razonamiento 
+% técnico y la justificación de las decisiones de diseño.”_
+%
+% _"Cuide la presentación, escala, colores, títulos y leyendas de sus gráficos para hacerlos 
+% lo más legible posible para la evaluación."_
+
+%% Tareas a desarrollar
+% Diseñar e implementar en MATLAB un script que permita reducir la serie 
+% temporal original. La salida debe ser una nueva serie reducida que entregue 
+% un valor representativo cada 10 días.
+
+
+%% 1. Análisis Previo de los Datos
+% Seleccione y aplique comandos de MATLAB para estudiar la señal original 
+% y extraer la información relevante.
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+clc 
+clear
+x = load('datos_turnos.txt');
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+
+
+%%
+% 
+% *1.1 Justifique brevemente la elección de dichas herramientas*
+
+% Respuesta
+
+%%
+% 
+% *1.2 Explique los resultados obtenidos del análisis*
+
+% Respuesta
+
+%%
+% 
+% *1.3 Mencione qué información le resulta relevante y útil para la solución.*
+
+% Respuesta
+
+%% 2. Pre-Proceso
+% *Proceda a realizar el tratamiento de la señal*
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+%
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+%%
+% 
+% *2.1 Comente brevemente sobre el método elegido para el pre-procesamiento.*
+
+% Respuesta
+
+%%
+% 
+% *2.2 ¿Por qué dicha técnica es necesaria y adecuada para este problema específico? (considerando el contenido frecuencial).*
+
+% Respuesta
+
+%%
+% 
+% *2.3 Mencione los criterios utilizados para definir los parámetros del sistema de procesamiento.*
+
+% Respuesta
+
+
+%% 3. Generar serie final y gráficos
+% A partir del procesamiento anterior, generar la serie final y grafiquela en 
+% el tiempo y la frecuencia. Asegurarse de que la alineación temporal sea correcta 
+% respecto a la señal original.
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+%
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+
+
+%% 4. Validación de la respuesta
+% Comparar su solución con al menos una alternativa que considere incorrecta 
+% o subóptima para validar por contraste la suya. 
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+%
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+%%
+% 
+% *4.1 Qué efectos negativos produce la alternativa subóptima (en el dominio del tiempo y/o frecuencia).*
+
+% Respuesta
+
+%%
+% 
+% *4.2 Por qué su solución propuesta mitiga estos efectos.*
+
+% Respuesta
+
+%% 5. Tasa de Cambio (Derivada) y Punto Fijo
+% Se nos comunica que conocer solo la cantidad total de pacientes ya no es suficiente para organizar el consultorio. 
+% Ahora necesitamos saber qué tan rápido sube o baja esa cantidad. Esta 
+% "velocidad de cambio" de la demanda se calcula directamente usando la derivada matemática.
+%%
+% Como ingeniero proponés usar *representación en punto fijo* para optimizar el sistema: 
+% buscamos aumentar la velocidad de cálculo y minimizar el uso de memoria.
+
+%%
+% 
+% # Construya la velocidad de cambio de *su señal resultado del ejercicio anterior* en (turno/día). 
+% # Analice cómo se distribuyen los valores de su señal (usando un histograma o gráfico). 
+% # A partir de esa observación, determine un formato en punto fijo conveniente que ajuste para dicho rango 
+% # Indique de su respuesta: N tamaño de la palabra binaria (8,16 o 32 bits) y los m bits para la parte entera, n bits para la parte fraccionaria usando la notación Qm.n (con 1 bit de signo), rango, resolución y ruido cuantización 
+
+
+
+
+%%
+% *Completar con los resultados obtenidos:*
+
+%%
+% * *Palabra binaria:* N 
+% * *Representación*:Qm.n
+% * *Rango*:
+% * *Resolución:*:
+% * *Ruido de cuantización*:
+
+
+%% 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Cálculo de la velocidad 
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% 
+%
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+% Coloque el código de su solución aquí
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+%
+%
+%REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH-
+
+
+
+
+
+
+
+
+##### SOURCE END #####
+-->
+</body>
+</html>
