@@ -59,9 +59,6 @@
 % correcto
 
 %% Parameters (golden car)
-clc
-clear
-close all
 
 m_s = 3000;  % Sprung mass (masa del chasis por rueda) (kg)
 k_s = 63.3*m_s;  % Spring stiffness (rigidez del resorte) (N/m)
@@ -69,3 +66,78 @@ c_s = 6*m_s;  % Damping coefficient (coeficiente de amortiguamiento del amortigu
 k_t = 653*m_s;  % Tire stiffness (rigidez del neumático) (N/m)
 c_t = 0;  % Tire damping (Ns/m)
 m_u = 0.15*m_s;  % (masa de la rueda) Unsprung mass (kg)
+
+
+%% Matrices de espacio de estados
+% Estados:
+% z1 = x_s
+% z2 = x_u
+% z3 = x_s_dot
+% z4 = x_u_dot
+%
+% Entrada:
+% u = y(t), desplazamiento del camino
+
+A_ss = [ 0              0                  1              0;
+         0              0                  0              1;
+        -k_s/m_s        k_s/m_s           -c_s/m_s        c_s/m_s;
+         k_s/m_u       -(k_s+k_t)/m_u      c_s/m_u       -(c_s+c_t)/m_u ];
+
+B_ss = [ 0;
+         0;
+         0;
+         k_t/m_u ];
+
+B_control = [ 0;
+              0;
+              1/m_s;
+             -1/m_u ];
+
+%% Salida: compresión de suspensión
+% y_salida = x_s - x_u
+
+C_ss = [ 1  -1   0   0 ];
+
+D_ss = 0;
+
+%% Sistema
+sys = ss(A_ss, B_ss, C_ss, D_ss);
+
+H = tf(sys)
+
+G_control = tf(ss(A_ss, B_control, C_ss, D_ss));
+%pidTuner(G_control, 'PID')
+
+Kp	= 1473065.7257
+Ki	= 4075279.5019
+Kd	= 133114.9576
+%Mp = 0;
+%Ts = 1;
+%if Mp == 0
+%    zeta = 1;
+%    wn   = 5.8 / Ts;
+%    fprintf('Mp=0 => zeta=1 (critico), wn = %.4f\n', wn)
+%else
+%   f   = @(x) [exp(-pi*x(1)/sqrt(1-x(1)^2)) - Mp, ...
+%                 4/(x(1)*x(2))                - Ts];
+%   sol = fsolve(f, [0.5, 4], optimset('Display','off'));
+% zeta = sol(1);
+% wn   = sol(2);
+% fprintf('zeta = %.4f,  wn = %.4f rad/s\n', zeta, wn)
+% end
+
+s = tf('s');
+
+% Planta de control: fuerza del actuador -> compresión
+H = G_control;
+
+% I-PD
+I  = tf(Ki, [1 0]);      % Ki/s
+PD = tf([Kd Kp], 1);     % Kd*s + Kp
+
+Hlc = minreal((H*I)/(1 + H*(I + PD)));
+
+stepinfo(Hlc, 'SettlingTimeThreshold', 0.05)
+step(Hlc)
+grid on
+
