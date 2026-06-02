@@ -8,7 +8,8 @@ clear; clc; close all;
 
 zeta_A = 1;
 Ts_A = 2.0;
-wn_A = 4 / (zeta_A * Ts_A);  % = 2 rad/s
+%wn_A = 4 / (zeta_A * Ts_A)  % = 2 rad/s
+wn_A = 5.8/Ts_A
 
 fprintf('=== Caso A ===\n');
 fprintf('zeta = %.4f\n', zeta_A);

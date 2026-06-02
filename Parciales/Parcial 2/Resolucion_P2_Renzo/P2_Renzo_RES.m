@@ -59,7 +59,7 @@
 % correcto
 
 %% Parameters (golden car)
-
+clc, clear
 m_s = 3000;  % Sprung mass (masa del chasis por rueda) (kg)
 k_s = 63.3*m_s;  % Spring stiffness (rigidez del resorte) (N/m)
 c_s = 6*m_s;  % Damping coefficient (coeficiente de amortiguamiento del amortiguador) (Ns/m)
@@ -91,12 +91,13 @@ B_ss = [ 0;
 B_control = [ 0;
               0;
               1/m_s;
-             -1/m_u ];
+             -1/m_u ]
+
 
 %% Salida: compresión de suspensión
 % y_salida = x_s - x_u
 
-C_ss = [ 1  -1   0   0 ];
+C_ss = [ 1  -1   0   0 ]
 
 D_ss = 0;
 
@@ -105,7 +106,7 @@ sys = ss(A_ss, B_ss, C_ss, D_ss);
 
 H = tf(sys)
 
-G_control = tf(ss(A_ss, B_control, C_ss, D_ss));
+G_control = tf(ss(A_ss, B_control, C_ss, D_ss))
 %pidTuner(G_control, 'PID')
 
 Kp	= 1473065.7257

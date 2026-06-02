@@ -192,7 +192,7 @@ D_ss = [ 0 ]
      
 H = tf(ss(A_ss, B_ss, C_ss, D_ss))
 stepinfo(H)
-%pidTuner(H, 'PID');
+pidTuner(H, 'PID');
 
 
 %% Diseño del filtro de Kalman
